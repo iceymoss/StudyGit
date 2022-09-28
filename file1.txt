@@ -1,8 +1,0 @@
-This is a test for git 
-Git is a distributed version control system.
-Git is free software.
-Git is a distributed version control system.
-Git is free software distributed under the GPL.
-我的第三次修改！
-我的第四次修改
-快速创建了一个分支
