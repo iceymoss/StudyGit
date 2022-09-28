@@ -1,0 +1,45 @@
+syntax = "proto3";
+package trip;
+option go_package="/.;proto";
+
+message GetTripRequest{
+    string  id = 1;  
+}
+
+message PathData {
+    string path = 1;
+}
+
+message GetTripResponse{  
+    int32 tripId = 1; 
+    int32 userId = 2;
+    string start = 3;
+    repeated PathData path = 4;
+    string end = 5;
+    int32 distans = 6;
+    float fee = 7;
+    int32 time = 8;
+}
+
+message CreateTripRequest {
+    int32 tripId = 1; 
+    int32 userId = 2;
+    string start = 3;
+    string end = 4;
+}
+
+message CreateTripRespnse{
+    int32 tripId = 1; 
+    int32 userId = 2;
+    string start = 3;
+    string end = 4;
+    int32 distans = 5;
+    float fee = 6;
+    int32 time = 7;
+}
+
+//接口
+service TripService{
+    rpc GetTrip(GetTripRequest) returns (GetTripResponse);
+    rpc CreateTrip(CreateTripRequest) returns (CreateTripRespnse);
+}

@@ -1,0 +1,14 @@
+type: google.api.Service
+config_version: 3
+# 用与对外暴露http端口
+http:
+  rules:
+  - selector: trip.TripService.GetTrip  #proto文件包名.接口服务名.接口名
+    get: /trip/{id}
+  - selector: trip.TripService.CreateTrip
+    post: /trip/start
+    body: "*"
+
+
+  
+
